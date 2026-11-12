@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erste Seite</title>
+  <meta name="description" content="Kurze Beschreibung meiner Seite">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --text: #1e1e1e;
+      --muted: #666;
+      --accent: #2a6f97;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16181a;
+        --text: #e8e8e8;
+        --muted: #9a9a9a;
+        --accent: #6bb6e0;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+    header { padding-top: 3rem; }
+    h1 { margin: 0 0 .25rem; font-size: 2rem; }
+    .subtitle { color: var(--muted); margin: 0; }
+    h2 { margin-top: 2rem; font-size: 1.3rem; }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--muted); margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen!</h1>
+    <p class="subtitle">Das ist die erste Webseite.</p>
+  </header>
+
+  <main>
+    <h2>Über diese Seite</h2>
+    <p>
+      HTML 4 war der Standard vor HTML 5. Es war von Dezember 1994 gültig und<br>
+      Wurde im November 2016 von HTML 5 abgelöst, das bis heute gültig ist.
+    </p>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language#Versionen">Ein Beispiel-Link</a></li>
+      <li><a href="mailto:scoophewer@posteo.com">Schreib mir eine E-Mail</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Scoophewer</p>
+  </footer>
+</body>
+</html>
