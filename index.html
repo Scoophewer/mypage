@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Zufall und Bestimmung</TITLE>
+
+<!-- ===================================================== -->
+<!-- SUCHFUNKTION (JavaScript)                             -->
+<!-- Diesen Block NICHT verändern. Er durchsucht alle      -->
+<!-- Einträge (<DIV CLASS="eintrag">) nach dem Suchtext    -->
+<!-- und springt zum Treffer. Erneutes Absenden der Suche  -->
+<!-- (Enter) springt zum nächsten Treffer.                 -->
+<!-- ===================================================== -->
+<SCRIPT TYPE="text/javascript">
+<!--
+var letzterTreffer = -1;
+var letzterSuchtext = "";
+
+function suchen() {
+  var suchtext = document.suche.suchtext.value.toLowerCase();
+  if (suchtext == "") { return false; }
+
+  // Neuer Suchtext: wieder von vorne beginnen
+  if (suchtext != letzterSuchtext) {
+    letzterTreffer = -1;
+    letzterSuchtext = suchtext;
+  }
+
+  var eintraege = document.getElementsByTagName("DIV");
+  var anzahl = eintraege.length;
+  var geprueft = 0;
+  var i = letzterTreffer + 1;
+
+  while (geprueft < anzahl) {
+    if (i >= anzahl) { i = 0; }
+    if (eintraege[i].className == "eintrag") {
+      var text = (eintraege[i].textContent || eintraege[i].innerText || "").toLowerCase();
+      if (text.indexOf(suchtext) != -1) {
+        letzterTreffer = i;
+        eintraege[i].scrollIntoView();
+        return false;
+      }
+    }
+    i = i + 1;
+    geprueft = geprueft + 1;
+  }
+
+  alert("Nichts gefunden: " + document.suche.suchtext.value);
+  return false;
+}
+// -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000EE" VLINK="#551A8B">
+
+<!-- ===================================================== -->
+<!-- KOPFBEREICH: Überschrift links, Suchzeile rechts oben -->
+<!-- ===================================================== -->
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+  <TD ALIGN="LEFT" VALIGN="TOP">
+    <H1>Zufall und Bestimmung</H1>
+  </TD>
+  <TD ALIGN="RIGHT" VALIGN="TOP">
+    <FORM NAME="suche" ACTION="#" onSubmit="return suchen();">
+      <!-- Suchfeld: 20 Zeichen breit und maximal 20 Zeichen lang -->
+      Suche:
+      <INPUT TYPE="text" NAME="suchtext" SIZE="20" MAXLENGTH="20">
+      <INPUT TYPE="submit" VALUE="Los">
+    </FORM>
+  </TD>
+</TR>
+</TABLE>
+
+<HR>
+
+<!-- ===================================================== -->
+<!-- ANLEITUNG ZUM ERWEITERN                               -->
+<!--                                                       -->
+<!-- Für jeden neuen Eintrag den kompletten Block          -->
+<!-- zwischen "EINTRAG BEGINN" und "EINTRAG ENDE"          -->
+<!-- (inklusive der Trennlinie <HR>) kopieren und          -->
+<!-- direkt UNTER dem letzten Eintrag, aber VOR dem        -->
+<!-- Abschlussblock "To be continued" einfügen.            -->
+<!-- Dann nur Datumszeile und Text austauschen.            -->
+<!-- Jeder Eintrag MUSS in <DIV CLASS="eintrag"> stehen,   -->
+<!-- sonst findet ihn die Suche nicht.                     -->
+<!-- ===================================================== -->
+
+
+<!-- ================= EINTRAG BEGINN ====================== -->
+<DIV CLASS="eintrag">
+
+<!-- DATUMSZEILE (amerikanisches Format) -->
+2026-11-12 
+
+<!-- DATUMSTITEL (Kleinere Überschrift) -->
+<B>Erster Eintrag zum testen</B>
+
+<!-- TEXT: Zeilenumbrüche mit <BR>, max. 50 Zeichen pro Zeile -->
+<P>
+Lorem ipsum dolor sit amet, consetetur sadipscing<BR>
+elitr, sed diam nonumy eirmod tempor invidunt ut<BR>
+labore et dolore magna aliquyam erat, sed diam<BR>
+voluptua. At vero eos et accusam et justo duo<BR>
+dolores et ea rebum. Stet clita kasd gubergren,<BR>
+no sea takimata sanctus est Lorem ipsum dolor<BR>
+sit amet. Lorem ipsum dolor sit amet, consetetur<BR>
+sadipscing elitr, sed diam nonumy eirmod tempor<BR>
+invidunt ut labore et dolore magna aliquyam erat,<BR>
+sed diam voluptua. At vero eos et accusam et<BR>
+justo duo dolores et ea rebum. Stet clita kasd<BR>
+gubergren, no sea takimata sanctus est Lorem<BR>
+ipsum dolor sit amet. Lorem ipsum dolor sit amet,<BR>
+consetetur sadipscing elitr, sed diam nonumy<BR>
+eirmod tempor invidunt ut labore et dolore magna<BR>
+aliquyam erat, sed diam voluptua. At vero eos et<BR>
+accusam et justo duo dolores et ea rebum. Stet<BR>
+clita kasd gubergren, no sea takimata sanctus<BR>
+est Lorem ipsum dolor sit amet. Lorem ipsum dolor<BR>
+sit amet, consetetur sadipscing elitr, sed diam<BR>
+nonumy eirmod tempor invidunt ut labore et magna.
+</P>
+
+</DIV>
+<!-- ================= EINTRAG ENDE ======================== -->
+
+<!-- Trennlinie zwischen den Einträgen -->
+<HR>
+
+<!-- ===================================================== -->
+<!-- HIER DEN NÄCHSTEN EINTRAG EINFÜGEN (Kopie des         -->
+<!-- Blocks von "EINTRAG BEGINN" bis zur <HR> darüber).    -->
+<!-- ===================================================== -->
+
+<!-- ================= EINTRAG BEGINN ====================== -->
+<DIV CLASS="eintrag">
+
+<!-- DATUMSZEILE (amerikanisches Format) -->
+1958-06-23 
+
+<!-- DATUMSTITEL (Kleinere Überschrift) -->
+<B>Wie alles anfing</B>
+
+<!-- TEXT: Zeilenumbrüche mit <BR>, max. 50 Zeichen pro Zeile -->
+<P>
+An einem sonnigen Montag im Juni wurde ich auf <BR>
+einem Tisch, der mit Decken gepolstert war, von<BR>
+einer hemdsärmeligen Hebamme im Beisein meines<BR>
+jungen Vaters von meiner jungen Mutter entbunden<BR>
+dolores et ea rebum. Stet clita kasd gubergren,<BR>
+
+
+nonumy eirmod tempor invidunt ut labore et magna.
+</P>
+
+</DIV>
+<!-- ================= EINTRAG ENDE ======================== -->
+
+<!-- Trennlinie zwischen den Einträgen -->
+<HR>
+
+<!-- ===================================================== -->
+<!-- HIER DEN NÄCHSTEN EINTRAG EINFÜGEN (Kopie des         -->
+<!-- Blocks von "EINTRAG BEGINN" bis zur <HR> darüber).    -->
+<!-- ===================================================== -->
+
+<!-- ================= ABSCHLUSSBLOCK ====================== -->
+<!-- Bleibt immer ganz unten, nicht kopieren.              -->
+<P>
+<I>Fortsetzung folgt &hellip; komm wieder.</I>
+</P>
+
+</BODY>
+</HTML>
